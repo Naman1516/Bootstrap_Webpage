@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <style>
+        body {
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .bgimg {
+            background-image: linear-gradient(rgb(10, 10, 10), rgb(187, 187, 187));
+        }
+
+        .carousel-inner img {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #0C0C0C">
+        <a href="#" class="navbar-brand font-weight-bold">Dance Academy</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynav">
+            <ul class="navbar-nav ml-auto font-weight-bold">
+                <li class="nav-item"><a class="nav-link" href="#whoarewe">Who are we?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#meet">Meet Your Teachers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#new">Newly Releasing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signin" role="dialog" aria-labelledby="modaltask" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="modaltask">Course Registration</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="name" class="font-weight-bold">Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Name" size="50"><br>
+                    <label for="mobile" class="font-weight-bold">Mobile</label><br>
+                    <input type="text" id="mobile" name="mobile" placeholder="Mobile" size="50"><br>
+                    <label for="email" class="font-weight-bold">Email</label><br>
+                    <input type="text" id="email" name="email" placeholder="Email" size="50"><br>
+                    <label for="city" class="font-weight-bold">City</label><br>
+                    <input type="text" id="city" name="city" placeholder="City" size="50"><br>
+                    <label for="course" class="font-weight-bold">Which course do you prefer?</label>
+                    <select class="form-control" id="course">
+                        <option selected>-Select Course-</option>
+                        <option>Diploma in Dance Foundation Course</option>
+                        <option>Young Masters Program</option>
+                        <option>Regular Batches</option>
+                    </select>
+                    <button type="button" class="btn btn-primary mt-2 font-weight-bold" data-dismiss="modal">Continue to
+                        Payment Gateway</button>
+                </div>
+                <div class="modal-footer text-center font-weight-bold">
+                    <p class="text-center small mr-3">By procceding, you agree to all out terms and conditions
+                        regarding the same.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal End-->
+    <div class="container-fluid text-center mt-5 pt-5 bgimg">
+        <div class="row align-items-md-center align-items-lg-center" id="section1">
+            <div class="col-sm-12 col-md-12 col-lg-6 text-white">
+                <div class="alert alert-secondary alert-dismissible">
+                    <strong>Seats are filing really soon, Enroll Now!</strong>
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                </div>
+                <p class="h1 font-weight-bolder">LETS DANCE LIKE</p>
+                <p class="h1 font-weight-bolder">NOBODY IS WATCHING</p>
+                <hr style="width: 20%;">
+                <p class="h4 font-weight-normal">Any Body Can Dance from Anywhere in the world, Anytime. Our motto is to
+                    spread the Joy of Dance and hence our courses are affordable and convenient so that we can empower
+                    Everyone to Dance for your Happiness!
+                </p>
+                <a href="#" data-toggle="popover" title="Hurry Up!" data-content="Only 28% seats are left!"
+                    data-trigger="hover"><button class="btn btn-primary btn-lg m-5 font-weight-bold" data-toggle="modal"
+                        data-target="#signin">
+                        Register Now
+                    </button></a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <img src="https://demo.curlythemes.com/pirouette/wp-content/uploads/sites/19/revslider/pirouette/Untitled-3.png"
+                    alt="Dancing Girl" height="60%">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 p-2">
+                <div class="progress" style="height:30px;">
+                    <div class="progress-bar bg-secondary progress-bar-striped" role="progressbar" style="width:78%;">
+                        <a href="#" data-toggle="tooltip" title="Only 140 Seats are remaining out of total 500 seats." data-placement="bottom" class="text-light font-weight-bold">Hurry Up, only 28% seats are left! Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row bg-info text-white p-5" id="whoarewe">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="text-center h2 text-capitalize p-2 font-weight-bolder">Who are we?</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="text-center text-lead pl-5 pr-5 font-weight-bold" style="font-size: 20px;">The Terence Lewis
+                    Contemporary Dance
+                    Company (voted India’s Number 1 dance company) and the Terence
+                    Lewis Professional Training Institute are widely-acknowledged as the country’s most popular and
+                    reputed
+                    dance organisations. Together with the Terence Lewis Dance Scholarship Foundation Trust, they make
+                    up
+                    the TL brand, which fosters creative excellence in the talented, enthusiastic dancer, raising the
+                    standards of dance in India and beyond. Learn about our various courses both online and in the
+                    studio
+                    and pick the perfect course for you.
+                </p>
+            </div>
+        </div>
+        <div class="row bg-danger p-5" id="meet">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="text-center h2 text-capitalize font-weight-bold text-white p-2">Meet your teachers</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <img class="rounded img-fluid" src="https://www.terencelewis.com/admin/uploads/1.jpg"
+                                alt="teachers">
+                            <p class="p-5 text-white h3 font-weight-bold">Terence Lewis</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="rounded img-fluid" src="https://www.terencelewis.com/admin/uploads/mahrukkh.jpg"
+                                alt="teachers">
+                            <p class="p-5 text-white h3 font-weight-bold">Mahrukh Dumasia</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="rounded img-fluid"
+                                src="https://www.terencelewis.com/admin/uploads/salim-sheikh.jpeg" alt="teachers">
+                            <p class="p-5 text-white h3 font-weight-bold">Salim Shaikh</p>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev bg-danger" href="#carousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next bg-danger" href="#carousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row bg-warning text-white p-5" id="new">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="text-center h2 text-capitalize font-weight-bolder p-2">Newly releasing</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center p-2">
+                <img class="img-fluid" src="https://www.terencelewis.com/admin/uploads/didfc.jpeg" alt="new course">
+            </div>
+        </div>
+        <div class="row bg-secondary text-white p-5" id="contact">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="text-center h2 text-capitalize font-weight-bolder p-2">Contact Us</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 text-center p-2">
+                <p class="text-center text-lead pl-5 pr-5 font-weight-bold">
+                    Address <br />
+                    Nateshwar Bhavan, 493,<br />
+                    Khar - Danda Rd, Khar West, <br />
+                    Mumbai, Maharashtra 400052
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 text-center p-2">
+                <span class="bi bi-telephone-fill"></span></p>
+                <p class="text-center text-lead pl-5 pr-5 font-weight-bold">
+                    Phone <br />
+                    +(91) 9137931980 <br />
+                    +(91) 9137930268
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
